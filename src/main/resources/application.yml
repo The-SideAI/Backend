@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: message-guard
+  datasource:
+    # 환경 변수 DB_URL, DB_USERNAME, DB_PASSWORD를 우선 참조
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+detection:
+  threshold:
+    warning: 50.0
+    critical: 85.0
+
+  model-server:
+
+    # 환경 변수 AI_MODEL_URL, AI_MODEL_ENDPOINT를 우선 참조
+
+    url: ${AI_MODEL_URL}
+    endpoint: ${AI_MODEL_ENDPOINT}
+    connect-timeout: 5000 # ms
+    read-timeout: 10000   # ms

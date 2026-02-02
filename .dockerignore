@@ -1,0 +1,11 @@
+.git
+.gradle
+.idea
+build
+out
+*.class
+*.jar
+*.war
+.DS_Store
+gradlew
+gradlew.bat
