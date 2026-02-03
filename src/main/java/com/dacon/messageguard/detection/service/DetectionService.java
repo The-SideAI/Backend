@@ -8,8 +8,6 @@ import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestClient;
 
-import java.time.Duration;
-
 @Slf4j
 @Service
 public class DetectionService {
@@ -37,7 +35,7 @@ public class DetectionService {
             ModelRequest modelRequest = new ModelRequest(
                 request.uuid(),
                 request.messages(),
-                request.sourceUrl()
+                request.platform()
             );
 
             ModelResponse modelResponse = restClient.post()
@@ -61,13 +59,14 @@ public class DetectionService {
             return new AnalyzeResponse(RiskLevel.UNKNOWN, "분석 결과가 비어있습니다.", null, null, null);
         }
         
-        RiskLevel riskLevel = RiskLevel.SAFE;
-        double score = response.score();
-        
-        if (score >= properties.threshold().critical()) {
-            riskLevel = RiskLevel.CRITICAL;
-        } else if (score >= properties.threshold().warning()) {
-            riskLevel = RiskLevel.WARNING;
+        RiskLevel riskLevel = RiskLevel.UNKNOWN;
+        ModelRiskLevel modelRiskLevel = response.riskLevel();
+        if (modelRiskLevel != null) {
+            riskLevel = switch (modelRiskLevel) {
+                case CRITICAL -> RiskLevel.CRITICAL;
+                case SUSPICIOUS -> RiskLevel.SUSPICIOUS;
+                case NORMAL -> RiskLevel.NORMAL;
+            };
         }
 
         return new AnalyzeResponse(
@@ -75,7 +74,7 @@ public class DetectionService {
             response.summary(),
             response.type(),
             response.reason(),
-            response.nextQuestion()
+            response.recommendedQuestions()
         );
     }
 }
