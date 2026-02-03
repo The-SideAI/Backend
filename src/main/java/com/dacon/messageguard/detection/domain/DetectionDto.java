@@ -34,9 +34,9 @@ public class DetectionDto {
 
     // 2. [Spring Boot -> Model Server] 요청
     public record ModelRequest(
-        UUID uuid,              // 분석 요청 식별자
-        List<Message> messages, // 대화 내역 리스트
-        String sourceUrl        // (옵션) 텍스트를 가져온 URL
+            UUID uuid,              // 분석 요청 식별자
+            List<Message> messages, // 대화 내역 리스트
+            String platform        // (옵션) 텍스트를 가져온 URL
     ) {}
 
     // 3. [Model Server -> Spring Boot] 응답
