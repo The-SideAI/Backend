@@ -48,7 +48,9 @@ public class DetectionDto {
         String type,
         List<Reason> reason,
         @JsonProperty("recommended_questions")
-        List<String> recommendedQuestions
+        List<String> recommendedQuestions,
+        @JsonProperty("recommendations")
+        List<String> recommendations
     ) {}
 
     public record Reason(
@@ -63,7 +65,8 @@ public class DetectionDto {
         String summary,         // 종합 의견
         String type,            // 피싱 유형 (예: 중고거래, 대출권유 등)
         List<Reason> reason,    // 판단 근거 리스트
-        List<String> recommendedQuestions // 사용자가 이어서 할 수 있는 질문 추천
+        List<String> recommendedQuestions, // 사용자가 이어서 할 수 있는 질문 추천
+        List<String> recommendations // 권고사항
     ) {}
 
     public enum RiskLevel {
