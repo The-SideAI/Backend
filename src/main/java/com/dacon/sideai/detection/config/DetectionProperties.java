@@ -1,4 +1,4 @@
-package com.dacon.messageguard.detection.config;
+package com.dacon.sideai.detection.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 

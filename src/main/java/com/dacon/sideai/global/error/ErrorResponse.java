@@ -1,4 +1,4 @@
-package com.dacon.messageguard.global.error;
+package com.dacon.sideai.global.error;
 
 import java.time.LocalDateTime;
 

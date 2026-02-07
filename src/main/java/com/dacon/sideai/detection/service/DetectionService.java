@@ -1,12 +1,12 @@
-package com.dacon.messageguard.detection.service;
+package com.dacon.sideai.detection.service;
 
-import com.dacon.messageguard.detection.config.DetectionProperties;
-import com.dacon.messageguard.detection.domain.DetectionDto.AnalyzeRequest;
-import com.dacon.messageguard.detection.domain.DetectionDto.AnalyzeResponse;
-import com.dacon.messageguard.detection.domain.DetectionDto.ModelRequest;
-import com.dacon.messageguard.detection.domain.DetectionDto.ModelResponse;
-import com.dacon.messageguard.detection.domain.DetectionDto.ModelRiskLevel;
-import com.dacon.messageguard.detection.domain.DetectionDto.RiskLevel;
+import com.dacon.sideai.detection.config.DetectionProperties;
+import com.dacon.sideai.detection.domain.DetectionDto.AnalyzeRequest;
+import com.dacon.sideai.detection.domain.DetectionDto.AnalyzeResponse;
+import com.dacon.sideai.detection.domain.DetectionDto.ModelRequest;
+import com.dacon.sideai.detection.domain.DetectionDto.ModelResponse;
+import com.dacon.sideai.detection.domain.DetectionDto.ModelRiskLevel;
+import com.dacon.sideai.detection.domain.DetectionDto.RiskLevel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.MediaType;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;

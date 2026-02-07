@@ -1,4 +1,4 @@
-package com.dacon.messageguard.global.config;
+package com.dacon.sideai.global.config;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -12,7 +12,7 @@ public class SwaggerConfig {
   public OpenAPI messageGuardOpenAPI() {
     return new OpenAPI()
         .info(new Info()
-            .title("Message Guard API")
+            .title("Side ai API")
             .description("Chrome Extension - Phishing Detection Service API")
             .version("v1.0.0"));
   }

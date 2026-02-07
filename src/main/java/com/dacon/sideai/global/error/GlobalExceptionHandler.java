@@ -1,4 +1,4 @@
-package com.dacon.messageguard.global.error;
+package com.dacon.sideai.global.error;
 
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;

@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.dacon'
 version = '0.0.1-SNAPSHOT'
-description = 'message-guard'
+description = 'sideai'
 
 java {
     toolchain {

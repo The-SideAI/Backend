@@ -1,8 +1,8 @@
-package com.dacon.messageguard.detection.controller;
+package com.dacon.sideai.detection.controller;
 
-import com.dacon.messageguard.detection.domain.DetectionDto.AnalyzeRequest;
-import com.dacon.messageguard.detection.domain.DetectionDto.AnalyzeResponse;
-import com.dacon.messageguard.detection.service.DetectionService;
+import com.dacon.sideai.detection.domain.DetectionDto.AnalyzeRequest;
+import com.dacon.sideai.detection.domain.DetectionDto.AnalyzeResponse;
+import com.dacon.sideai.detection.service.DetectionService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;

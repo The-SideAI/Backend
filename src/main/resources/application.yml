@@ -1,6 +1,6 @@
 spring:
   application:
-    name: message-guard
+  name: sideai
   datasource:
     # 환경 변수 DB_URL, DB_USERNAME, DB_PASSWORD를 우선 참조
     url: ${DB_URL}

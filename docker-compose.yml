@@ -1,7 +1,7 @@
 services:
   app:
     build: .
-    container_name: message-guard-app
+    container_name: sideai-app
     ports:
       - "8080:8080"
     environment:
@@ -13,11 +13,11 @@ services:
     depends_on:
       - postgres
     networks:
-      - message-guard-network
+      - sideai-network
 
   postgres:
     image: postgres:15-alpine
-    container_name: message-guard-db
+    container_name: sideai-db
     environment:
       - POSTGRES_DB=message_guard
       - POSTGRES_USER=${DB_USERNAME}
@@ -27,10 +27,10 @@ services:
     volumes:
       - postgres_data:/var/lib/postgresql/data
     networks:
-      - message-guard-network
+      - sideai-network
 
 networks:
-  message-guard-network:
+  sideai-network:
     driver: bridge
 
 volumes:

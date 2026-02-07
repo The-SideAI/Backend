@@ -1,4 +1,4 @@
-package com.dacon.messageguard.detection.domain;
+package com.dacon.sideai.detection.domain;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotEmpty;
