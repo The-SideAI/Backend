@@ -15,7 +15,8 @@ public class DetectionDto {
             UUID uuid,              // 분석 요청 식별자
             @NotNull(message = "메시지 리스트는 필수입니다.")
         List<Message> messages, // 대화 내역 리스트
-            String platform        // (옵션) 텍스트를 가져온 URL
+            String platform,       // (옵션) 텍스트를 가져온 URL
+            String type            // (옵션) 메시지 유형(예: 중고거래 등)
     ) {}
 
     public record Message(
@@ -36,7 +37,8 @@ public class DetectionDto {
     public record ModelRequest(
             UUID uuid,              // 분석 요청 식별자
             List<Message> messages, // 대화 내역 리스트
-            String platform        // (옵션) 텍스트를 가져온 URL
+            String platform,       // (옵션) 텍스트를 가져온 URL
+            String type            // (옵션) 메시지 유형(예: 중고거래 등)
     ) {}
 
     // 3. [Model Server -> Spring Boot] 응답

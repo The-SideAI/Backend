@@ -35,7 +35,8 @@ public class DetectionService {
             ModelRequest modelRequest = new ModelRequest(
                 request.uuid(),
                 request.messages(),
-                request.platform()
+                request.platform(),
+                request.type()
             );
 
             ModelResponse modelResponse = restClient.post()
