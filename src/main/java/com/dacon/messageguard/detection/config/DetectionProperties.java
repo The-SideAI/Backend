@@ -7,15 +7,20 @@ public record DetectionProperties(
     Threshold threshold,
     ModelServer modelServer
 ) {
-    public record Threshold(
-        double warning,
-        double critical
-    ) {}
 
-    public record ModelServer(
-        String url,
-        String endpoint,
-        long connectTimeout,
-        long readTimeout
-    ) {}
+  public record Threshold(
+      double warning,
+      double critical
+  ) {
+
+  }
+
+  public record ModelServer(
+      String url,
+      String endpoint,
+      long connectTimeout,
+      long readTimeout
+  ) {
+
+  }
 }

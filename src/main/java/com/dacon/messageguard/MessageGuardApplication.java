@@ -8,8 +8,8 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 @ConfigurationPropertiesScan
 public class MessageGuardApplication {
 
-    public static void main(String[] args) {
-        SpringApplication.run(MessageGuardApplication.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(MessageGuardApplication.class, args);
+  }
 
 }

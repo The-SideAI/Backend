@@ -8,12 +8,12 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SwaggerConfig {
 
-    @Bean
-    public OpenAPI messageGuardOpenAPI() {
-        return new OpenAPI()
-                .info(new Info()
-                        .title("Message Guard API")
-                        .description("Chrome Extension - Phishing Detection Service API")
-                        .version("v1.0.0"));
-    }
+  @Bean
+  public OpenAPI messageGuardOpenAPI() {
+    return new OpenAPI()
+        .info(new Info()
+            .title("Message Guard API")
+            .description("Chrome Extension - Phishing Detection Service API")
+            .version("v1.0.0"));
+  }
 }
