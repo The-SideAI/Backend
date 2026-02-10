@@ -55,6 +55,8 @@ public class DetectionDto {
       String type,
       @JsonProperty("risk_signals")
       List<RiskSignal> riskSignals,
+      @JsonProperty("recommended_questions")
+      List<String> recommendedQuestions,
       @JsonProperty("additional_recommendations")
       List<String> additionalRecommendations,
       @JsonProperty("rag_references")
@@ -84,6 +86,8 @@ public class DetectionDto {
       String type,            // 피싱 유형 (예: 중고거래, 대출권유 등)
       @JsonProperty("risk_signals")
       List<RiskSignal> riskSignals,    // 판단 근거 리스트
+      @JsonProperty("recommended_questions")
+      List<String> recommendedQuestions, // 사용자에게 제안할 질문 리스트
       @JsonProperty("additional_recommendations")
       List<String> additionalRecommendations, // 추가 권고사항
       @JsonProperty("rag_references")

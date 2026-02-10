@@ -57,13 +57,13 @@ public class DetectionService {
       log.error("AI 모델 서버 통신 중 오류 발생: {}", e.getMessage(), e);
       // 클라이언트가 500 에러 대신 "분석 불가" 상태를 알 수 있도록 UNKNOWN 반환
       return new AnalyzeResponse(RiskLevel.UNKNOWN, "분석 서버 연결 실패: 잠시 후 다시 시도해주세요.", null, null,
-          null, null);
+          null, null, null);
     }
   }
 
   private AnalyzeResponse interpretResult(ModelResponse response) {
     if (response == null) {
-      return new AnalyzeResponse(RiskLevel.UNKNOWN, "분석 결과가 비어있습니다.", null, null, null, null);
+      return new AnalyzeResponse(RiskLevel.UNKNOWN, "분석 결과가 비어있습니다.", null, null, null, null, null);
     }
 
     RiskLevel riskLevel = RiskLevel.UNKNOWN;
@@ -81,6 +81,7 @@ public class DetectionService {
         response.summary(),
         response.type(),
         response.riskSignals(),
+        response.recommendedQuestions(),
         response.additionalRecommendations(),
         response.ragReferences()
     );
